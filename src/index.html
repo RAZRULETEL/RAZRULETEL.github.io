@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header>
@@ -31,9 +33,9 @@
 	</div>
 	<div class="about_me">
 		<h2>Обо мне</h2>
-
+		<hr>
 		<div class="my_photo">
-			<img src="" alt="">
+			<img src="img\wb_boy.png" alt="">
 		</div>
 
 		<div class="about_me_text">
@@ -47,61 +49,68 @@
 	</div>
 	<div class="what_i_can">
 		<h2>Что я умею</h2>
-
-		<div class="web_design">
-			<img src="" alt="">
-			<h4>Веб-дизайн</h4>
-			<span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus facilis corrupti nemo, soluta ut optio.</span>
-		</div>
-		<div class="development">
-			<img src="" alt="">
-			<h4>Разработка</h4>
-			<span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus facilis corrupti nemo, soluta ut optio.</span>
-		</div>
-		<div class="ceo_optimization">
-			<img src="" alt="">
-			<h4>CEO-Оптимизация</h4>
-			<span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus facilis corrupti nemo, soluta ut optio.</span>
-		</div>
-		<div class="marketing">
-			<img src="" alt="">
-			<h4>Маркетинг</h4>
-			<span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus facilis corrupti nemo, soluta ut optio.</span>
+		<hr>
+		<div class="what_i_can_bigcont">
+			<div class="what_i_can_cont">
+				<img src="img\laptop.png" alt="">
+				<h4>Веб-дизайн</h4>
+				<span>Lorem ipsum dolor, minus facilis corrupti nemo, soluta ut optio.</span>
+			</div>
+			<div class="what_i_can_cont">
+				<img src="img\sign.png" alt="">
+				<h4>Разработка</h4>
+				<span>Lorem ipsum dolor, sit amet consectetur soluta ut optio.</span>
+			</div>
+			<div class="what_i_can_cont">
+				<img src="img\rocket.png" alt="">
+				<h4>CEO-Оптимизация</h4>
+				<span>Lorem ipsum dolor, consectetur adipisicing corrupti, soluta ut optio.</span>
+			</div>
+			<div class="what_i_can_cont">
+				<img src="img\gramofon.png" alt="">
+				<h4>Маркетинг</h4>
+				<span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </span>
+			</div>
 		</div>
 	</div>
 	<div class="cases">
 		<h2>Кейсы</h2>
+		<hr>
 		<h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, iure.</h5>
-		<img src="" alt="">
+		<img src="img\bg_cases.jpg" alt="">
 		<div class="client_site">
 			<h3>CLIENT:</h3>
 			<h5>Какая-то компания</h5>
 			<h3>WEBSITE:</h3>
 			<h5>https://www.somedomain.com</h5>
+			<input type="submit" value="Visit live site" OnClick="window.open('https://yandex.com','_blank')">
 		</div>
 		<div class="project_description">
 			<h3>Название проекта</h3>
 			<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat hic optio veniam ducimus velit laborum quis dolores ipsam tempora saepe repellendus, neque soluta voluptatum quisquam veritatis laboriosam nesciunt recusandae labore?</span>
 		</div>
-		<input type="submit" value="Visit live site" OnClick="window.open('https://yandex.com','_blank')">
+		
 	</div>
 	<div class="cost_calculator">
 		<div class="parameters">
 		 	<h2>Расчёт стоимости</h2>
 			<h3>Тип сайта</h3>
 			<select name="type" id="">
+				<option value="" selected disabled="">Выберите пункт...</option>
 				<option value=""></option>
 				<option value=""></option>
 				<option value=""></option>
 			</select>
 			<h3>Дизайн</h3>
 			<select name="design" id="">
+				<option value="" selected disabled="">Выберите пункт...</option>
 				<option value=""></option>
 				<option value=""></option>
 				<option value=""></option>
 			</select>
 			<h3>Адаптивность</h3>
 			<select name="adaptability" id="">
+				<option value="" selected disabled="">Выберите пункт...</option>
 				<option value=""></option>
 				<option value=""></option>
 				<option value=""></option>
@@ -115,69 +124,75 @@
 	</div>
 	<div class="statistics">
 		<h2>Немного статистики</h2>
-		<div class="happy_clients">
-			<img src="" alt="">
-			<h3>120</h3>
-			<h5>Счастливых клиентов</h5>
-		</div>
-		<div class="hours_of_work">
-			<img src="" alt="">
-			<h3>4,600</h3>
-			<h5>Часов работы</h5>
-		</div>
-		<div class="projects_ended">
-			<img src="" alt="">
-			<h3>340</h3>
-			<h5>Проектов завершено</h5>
-		</div>
-		<div class="prises_won">
-			<img src="" alt="">
-			<h3>23</h3>
-			<h5>Наград получено</h5>
+		<hr>
+		<div class="stats_bigcont">
+			<div class="stats">
+				<img src="img\smile.png" alt="">
+				<h3>120</h3>
+				<h5>Счастливых клиентов</h5>
+			</div>
+			<div class="stats">
+				<img src="img\orange_sign.png" alt="">
+				<h3>4,600</h3>
+				<h5>Часов работы</h5>
+			</div>
+			<div class="stats">
+				<img src="img\mark.png" alt="">
+				<h3>340</h3>
+				<h5>Проектов завершено</h5>
+			</div>
+			<div class="stats">
+				<img src="img\prize.png" alt="">
+				<h3>23</h3>
+				<h5>Наград получено</h5>
+			</div>
 		</div>
 	</div>
 	<div class="comments">
 		<h2>Отзывы</h2>
-		<div class="comment">
-			<img src="" alt="">
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam veniam aut aperiam dignissimos rerum, repellendus voluptas nemo, totam dolores perspiciatis.</p>
-			<p>Михаил, Ген директор ПАО "Газпром".</p>
+		<hr>
+		<img src="img\comm_photo.png" alt="">
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam veniam aut aperiam dignissimos rerum, repellendus voluptas nemo, totam dolores perspiciatis.</p>
+		<p><span class="comm_author">Михаил,</span> Ген директор ПАО "Газпром".</p>
+		<div class="comm_page_cont">
+			<div class="selected_comm"></div>
+			<div class="inactive_comm_page"></div>
+			<div class="inactive_comm_page"></div>
 		</div>
 	</div>
 	<div class="contacts">
 		<h2>Мои контакты</h2>
+		<hr>
 		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, quibusdam.</p>
-		<div class="addres">
-			<img src="" alt="">
-			<span>Lorem, ipsum dolor sit.</span>
-		</div>
-		<div class="email_addres">
-			<img src="" alt="">
-			<span>Lorem, ipsum dolor sit.</span>
-		</div>
-		<div class="phone_number">
-			<img src="" alt="">
-			<span>Lorem, ipsum dolor sit.</span>
+		<div class="contacts_bigcont">
+			<div class="contacts_smcont">
+				<img src="img/gps_mark.png" alt="">
+				<span>Lorem, ipsum dolor sit.</span>
+			</div>
+			<div class="contacts_smcont">
+				<img src="img/convert.png" alt="">
+				<span>Lorem, ipsum dolor sit.</span>
+			</div>
+			<div class="contacts_smcont">
+				<img src="img/phone.png" alt="">
+				<span>Lorem, ipsum dolor sit.</span>
+			</div>
 		</div>
 		<div class="feedback">
 			<h3>Оставьте мне сообщение</h3>
-			<input type="text" placeholder="Имя">
-			<input type="text" placeholder="Email"><br>
-			<textarea name="msg" id="" cols="30" rows="10" placeholder="Сообщение"></textarea><br>
-			<input type="submit" value="Отправить">
-		</div>
-		<div class="socials">
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
+			<div class="feedback_cont">
+				<input type="text" placeholder="Имя">
+				<input type="text" placeholder="Email"><br>
+				<textarea name="msg" id="" cols="30" rows="3" placeholder="Сообщение"></textarea><br>
+				<input class="submit" type="submit" value="Отправить">
+			</div>
 		</div>
 	</div>
 	<div class="map">
-		
+		<img src="img/map.jpg" alt="">
 	</div>
-	<p>Copyright © 2021 Вадим Мартыненко. Design by Web</p>
+	<div class="copyright">
+		<p>Copyright © 2021 Вадим Мартыненко. Design by Web</p>
+	</div>
 </body>
-</html>
+</html>	

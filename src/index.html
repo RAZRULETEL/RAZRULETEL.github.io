@@ -5,34 +5,62 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="loading_screen">
-		<div class="loader"></div>
+	<!-- <div class="loading_screen"> -->
+		<!-- <div class="loader"></div> -->
 	</div>
 	<header>
 		<nav>
-			<div class="logo">Вадим Мартыненко</div>
-			<div class="menu"><ul>
-
+			<div class="container">
+				<div class="row">
+					<div class="col-xxl-2 col-xl-3 col-lg-4 col-6"><div class="logo">Вадим Мартыненко</div></div>
+					<div class="col-xxl-6 col-xl-7 offset-xxl-4 offset-xl-2 offset-lg-0 col-lg-8 d-none d-lg-block">
+						<div class="menu"><ul>
 				<a href="#"><li>Обо мне</li></a>
 				<a href="#"><li>Услуги</li></a>
 				<a href="#"><li>Кейсы</li></a>
 				<a href="#"><li>Прайс</li></a>
 				<a href="#"><li>Отзывы</li></a>
 				<a href="#"><li>Контакты</li></a>
+				
+							</ul>
+						</div>
+					</div>
+					<div class="col-5 d-flex d-lg-none flex-column justify-content-center align-items-end">
+						<div class="dropdown">
+  								<a class="btn btn-outline-secondary white_btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Навигация</a>
 
-			</ul></div>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<li><a class="dropdown-item" href="#">Обо мне</a></li>
+				<li><a class="dropdown-item" href="#">Услуги</a></li>
+				<li><a class="dropdown-item" href="#">Кейсы</a></li>
+				<li><a class="dropdown-item" href="#">Прайс</a></li>
+				<li><a class="dropdown-item" href="#">Отзывы</a></li>
+				<li><a class="dropdown-item" href="#">Контакты</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</nav>
 	</header>
 	<main class="main">
-		<section class="title_cont">
-			<h1>Привет<br>Я Вадим Мартыненко</h1>
-			<h4>Фулл стек веб-разработчик</h4>
-			<input type="submit" value="Обо мне">
-			<input type="submit" value="Мои работы">
-		</section>
+		<div class="container h-100">
+			<div class="row align-items-center h-100">
+				<div class="col-lg-7 mt-5 pt-5">
+					<section class="title_cont mt-5">
+						<h1>Привет<br>Я Вадим Мартыненко</h1>
+						<h4>Фулл стек веб-разработчик</h4>
+						<input type="submit" value="Обо мне">
+						<input type="submit" value="Мои работы">
+					</section>
+				</div>
+			</div>
+		</div>
+
 	</main>
 	<section class="about_me">
 		<h2>Обо мне</h2>
@@ -53,48 +81,55 @@
 	<section class="what_i_can">
 		<h2>Что я умею</h2>
 		<hr>
-		<div class="what_i_can_bigcont">
-			<div class="what_i_can_cont">
+		<div class="container">
+		<div class="row justify-content-center align-items-center d-flex">
+			<div class="col-3 what_i_can_cont">
 				<img src="img\laptop.png" alt="">
 				<h4>Веб-дизайн</h4>
 				<span>Lorem ipsum dolor, minus facilis corrupti nemo, soluta ut optio.</span>
 			</div>
-			<div class="what_i_can_cont">
+			<div class="col-3 what_i_can_cont">
 				<img src="img\sign.png" alt="">
 				<h4>Разработка</h4>
 				<span>Lorem ipsum dolor, sit amet consectetur soluta ut optio.</span>
 			</div>
-			<div class="what_i_can_cont">
+			<div class="col-3 what_i_can_cont">
 				<img src="img\rocket.png" alt="">
 				<h4>CEO-Оптимизация</h4>
 				<span>Lorem ipsum dolor, consectetur adipisicing corrupti, soluta ut optio.</span>
 			</div>
-			<div class="what_i_can_cont">
+			<div class="col-3 what_i_can_cont">
 				<img src="img\gramofon.png" alt="">
 				<h4>Маркетинг</h4>
 				<span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </span>
 			</div>
 		</div>
+		</div>
 	</section>
-	<section class="cases">
+	<section class="cases container d-flex d-lg-block flex-wrap">
 		<h2>Кейсы</h2>
 		<hr>
 		<h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, iure.</h5>
-		<img src="img\bg_cases.jpg" alt="">
-		<div class="client_site">
+		<img src="img\bg_cases.jpg" class="img-fluid" alt="">
+		<div class="row">
+			<div class="client_site col-12 col-lg-3 d-flex d-lg-block align-items-baseline justify-content-md-between flex-wrap">
 			<h3>CLIENT:</h3>
-			<h5>Какая-то компания</h5>
-			<h3>WEBSITE:</h3>
-			<h5>https://www.somedomain.com</h5>
-			<input type="submit" value="Visit live site" OnClick="window.open('https://yandex.com','_blank')">
-		</div>
-		<div class="project_description">
+			<h5 class="ms-2 ms-lg-0">Какая-то компания</h5>
+			<div class="h-0 w-100 d-md-none"></div>
+			<h3 class="ms-md-auto">WEBSITE:</h3>
+			<h5 class="me-md-auto ms-2 ms-lg-0">https://www.somedomain.com</h5>
+			</div>
+			<div class="project_description col-12 col-lg-9">
 			<h3>Название проекта</h3>
 			<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat hic optio veniam ducimus velit laborum quis dolores ipsam tempora saepe repellendus, neque soluta voluptatum quisquam veritatis laboriosam nesciunt recusandae labore?</span>
+			</div>
 		</div>
-		
+		<div class="col-2 mt-3 d-flex">
+		<input type="submit" value="Visit live site" OnClick="window.open('https://yandex.com','_blank')">
+		</div>
 	</section>
-	<section class="cost_calculator">
+	<div class="container mt-5">
+	<section class="cost_calculator col-10 offset-1 p-4">
 		<div class="parameters">
 		 	<h2>Расчёт стоимости</h2>
 			<h3>Тип сайта</h3>
@@ -124,11 +159,11 @@
 			<p>Сроки<span>0</span></p>
 			<p>Стоимость<span>0</span></p>
 		</div>
-	</section>
+	</section></div>
 	<section class="statistics">
 		<h2>Немного статистики</h2>
 		<hr>
-		<div class="stats_bigcont">
+		<div class="stats_bigcont container">
 			<div class="stats">
 				<img src="img\smile.png" alt="">
 				<h3>120</h3>
@@ -151,7 +186,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="comments">
+	<section class="comments container mt-5">
 		<h2>Отзывы</h2>
 		<hr>
 		<img src="img\comm_photo.png" alt="">
@@ -163,11 +198,12 @@
 			<div class="inactive_comm_page"></div>
 		</div>
 	</section>
-	<section class="contacts">
+	<section class="contacts mt-5">
+		<div class="container">
 		<h2>Мои контакты</h2>
 		<hr>
 		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, quibusdam.</p>
-		<div class="contacts_bigcont">
+		<div class="row justify-content-around">
 			<div class="contacts_smcont">
 				<img src="img/gps_mark.png" alt="">
 				<span>Lorem, ipsum dolor sit.</span>
@@ -181,14 +217,17 @@
 				<span>Lorem, ipsum dolor sit.</span>
 			</div>
 		</div>
-		<div class="feedback">
+		<div class="feedback mt-5">
 			<h3>Оставьте мне сообщение</h3>
-			<div class="feedback_cont">
+			<div class="feedback_cont offset-2 col-8 mt-3 d-flex flex-wrap justify-content-between">
 				<input type="text" placeholder="Имя">
-				<input type="text" placeholder="Email"><br>
-				<textarea name="msg" id="" cols="30" rows="3" placeholder="Сообщение"></textarea><br>
+				<input type="text" placeholder="Email">
+			</div>
+			<div class="feedback_cont offset-2 col-8 mt-3">
+				<textarea name="msg" id="" cols="30" rows="3" placeholder="Сообщение" class="col-12"></textarea><br>
 				<input class="submit" type="submit" value="Отправить">
 			</div>
+		</div>
 		</div>
 	</section>
 	<section class="map">
@@ -197,5 +236,6 @@
 	<section class="copyright">
 		<p>Copyright © 2021 Вадим Мартыненко. Design by Web</p>
 	</section>
+	<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>	

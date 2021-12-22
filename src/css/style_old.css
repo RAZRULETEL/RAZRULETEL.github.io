@@ -69,22 +69,22 @@ nav{
 	opacity: 0;
 	display: inline-block;
 	transition: 0.05s;
-	animation: nav_start 0.4s 2s forwards;
+	animation: nav_start 0.4s 4s forwards;
 }
 .menu a:nth-child(2){
-	animation-delay: 2.4s;
+	animation-delay: 4.4s;
 }
 .menu a:nth-child(3){
-	animation-delay: 2.8s;
+	animation-delay: 4.8s;
 }
 .menu a:nth-child(4){
-	animation-delay: 3.2s;
+	animation-delay: 5.2s;
 }
 .menu a:nth-child(5){
-	animation-delay: 3.6s;
+	animation-delay: 5.6s;
 }
 .menu a:nth-child(6){
-	animation-delay: 4s;
+	animation-delay: 6s;
 }
 .menu a:visited{
 	color: #fff;
@@ -97,9 +97,7 @@ nav{
 }
 .menu{
 	float: left;
-}
-.white_btn:visited{
-	color: #fff;
+	margin-left: 20.5%;
 }
 .menu a{
 	line-height: 60px;
@@ -115,12 +113,12 @@ nav{
 	background:url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../img/bg.jpg) center/cover no-repeat;
 }
 .title_cont{
-	width: 100%;
 	color: #2c384a;
 	float: left;
+	margin: 25% 0 0 -1000px;
 	text-align: center;
 	opacity: 0;
-	animation: title 3s 2s ease forwards;
+	animation: title 3s 4s ease forwards;
 }
 .title_cont input:hover{
 	background: #6d7682;
@@ -139,7 +137,7 @@ nav{
 		opacity: 0;
 	}
 	to{
-		margin-left: 0;
+		margin-left: 9%;
 		opacity: 1;
 	}
 }
@@ -157,29 +155,6 @@ nav{
 	padding: 7px;
 	margin: 50px 14px 0 14px;
 	color: #6d7682;
-	background: #fff0;
-}
-@media (max-width: 992px){
-	.title_cont input{
-		border: 2px solid #fff;
-	}
-	.title_cont h1, .title_cont h4, .title_cont input{
-		position: relative;
-		color: #fff;
-		z-index: 2;
-	}
-	.main{
-		position: relative;
-	}
-	.main::after{
-		content: "";
-		bottom: 0;
-		top: 0;
-		left: 0;
-		right: 0;
-		position: absolute;
-		background: #00000038;
-	}
 }
 .about_me{
 	background: #fcfdfd;
@@ -248,8 +223,15 @@ h2{
 	margin-top: 2%;
 }
 .what_i_can_cont{
+	float: left;
+	width: 19%;
+    margin: 0px 3%;
 	text-align: center;
 	color: #3f495a;
+}
+.what_i_can_bigcont{
+	margin: 2% 15%;
+	/*width: 100%;*/
 }
 .what_i_can_cont h4{
 	color: #cf7600;
@@ -270,7 +252,20 @@ h2{
 .cases>h5{
 	text-align: center;
 	margin: 30px 0;
-	width: 100%;
+}
+.cases img{
+	margin: 0 auto;
+	display: block;
+}
+.client_site{
+	float: left;
+	margin-left: 6.15%;
+	width: 15.625%;
+}
+.project_description{
+	float: left;
+	width: 67.35%;
+	margin-left: 5.2%;
 }
 .cases h5, .cases h3, .cases span{
 	color: #384354;
@@ -286,6 +281,7 @@ h2{
 .cases input{
 	cursor: pointer;
 	float: left;
+	margin-top: 4.63%;
 	border-radius: 5px;
 	border: 3px solid #63b5ae;
 	background: #63b5ae;
@@ -355,11 +351,8 @@ h2{
 	color: #3f495a;
 }
 .stats_bigcont{
-	/*margin: 2% 15%;*/
+	margin: 2% 15%;
 	/*width: 100%;*/
-	justify-content: space-around;
-  align-items: center;
-  display: flex;
 }
 .stats h3{
 	margin-top: 15px;
@@ -397,7 +390,6 @@ h2{
 	font-weight: bold;
 }
 .comm_page_cont{
-	display: flex;
 	margin: 0 auto;
 	width: 100px;
 }
@@ -413,6 +405,7 @@ h2{
 }
 .contacts{
 	padding: 1px;
+	margin-top: 8.5%;
 	height: 100%;
 	max-height: 808px;
 }
@@ -436,12 +429,19 @@ h2{
 	margin: 40px 25%;
 	color: #fff;
 }
+.contacts_bigcont{
+	margin: 4% 24.5%;
+	/*width: 100%;*/
+}
 .contacts_smcont{
 	float: left;
 	width: 21%;
     margin: 0px 6.1%;
 	text-align: center;
 	color: #fff;
+}
+.feedback{
+	margin-top: 11%;
 }
 .feedback h3{
 	text-align: center;
@@ -451,31 +451,34 @@ h2{
 	color: #fff;
 	font-weight: bold;
 }
+.feedback_cont{
+	margin: 4% 21.5%;
+}
 .feedback_cont input{
+	width: 40%;
     line-height: 30px;
-    width: 47.666667%;
+    margin: 0 4% 20px 4%;
     padding: 0 3px;
     background: #ffffffc2;
 }
 .feedback_cont textarea{
-	/*width: 88.6%;*/
+	width: 88.6%;
     line-height: 30px;
-    /*margin: 0 4% 20px 4%;*/
+    margin: 0 4% 20px 4%;
     padding: 0 3px;
     background: #ffffffc2;
 }
 .feedback_cont .submit{
 	width: 13%;
-	border-radius: 4px;
-	line-height: 30px;
-	margin: 10px auto;
-	padding: 0px 3px;
-	background: #ffffff00;
-	color: #fff;
-	border: 2px solid #fff;
-	display: block;
-	cursor: pointer;
-	min-width: 90px;
+    border-radius: 4px;
+    line-height: 30px;
+    margin: 1px 41%;
+    padding: 0px 3px;
+    background: #ffffff00;
+    color: #fff;
+    border: 2px solid #fff;
+    display: block;
+    cursor: pointer;
 }
 .feedback_cont .submit:hover{
 	background: #fff;
@@ -540,8 +543,7 @@ h2{
 	/*margin-left: -200%;*/
 }
 .cost_calculator{
-	box-shadow: 0px 0px 15px 0px #747474;
-	/*margin: 300px 27.9% 0 25.73%;*/
+	margin: 300px 27.9% 0 25.73%;
 	transform: scale(0) translate(-100%);
 	animation: to_screen 2.5s 11s forwards;
 	/*margin-left: -200%;*/
@@ -558,7 +560,7 @@ h2{
 }
 .contacts{
 	transform: scale(0) translate(-100%);
-	animation: to_screen 2.5s 15s forwards; back_contacts 0s 16s forwards;
+	animation: to_screen 2.5s 15s forwards; /*back_contacts 0s 16s forwards;*/
 	/*margin-left: -200%;*/
 	background: url(../img/bg_feedback.jpg) center no-repeat;
 }
@@ -572,8 +574,4 @@ h2{
 	animation: to_screen 2.5s 19s forwards;
 	/*margin-left: -200%;*/
 }
-@media (max-width: 768px){
-	.what_i_can>.container{
-		max-width: 100%;
-	}
-}
+@media{}

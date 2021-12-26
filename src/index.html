@@ -133,31 +133,31 @@
 		<div class="parameters">
 		 	<h2>Расчёт стоимости</h2>
 			<h3>Тип сайта</h3>
-			<select name="type" id="">
-				<option value="" selected disabled="">Выберите пункт...</option>
-				<option value=""></option>
-				<option value=""></option>
-				<option value=""></option>
+			<select name="type" id="type" onchange="onTypeChanged()">
+				<option value="-1" selected disabled="">Выберите пункт...</option>
+				<option value="0">Визитка</option>
+				<option value="1">Лендинг</option>
+				<option value="2">Корпоративный</option>
 			</select>
 			<h3>Дизайн</h3>
-			<select name="design" id="">
-				<option value="" selected disabled="">Выберите пункт...</option>
-				<option value=""></option>
-				<option value=""></option>
-				<option value=""></option>
+			<select name="design" id="design" onchange="onDesignChanged()">
+				<option value="-1" selected disabled="">Выберите пункт...</option>
+				<option value="0">Обычный</option>
+				<option value="1">Hi-tech</option>
+				<option value="2">Максимум эффектов</option>
 			</select>
 			<h3>Адаптивность</h3>
-			<select name="adaptability" id="">
-				<option value="" selected disabled="">Выберите пункт...</option>
-				<option value=""></option>
-				<option value=""></option>
-				<option value=""></option>
+			<select name="adaptability" id="adaptability" onchange="onAdaptabilityChanged()">
+				<option value="-1" selected disabled="">Выберите пункт...</option>
+				<option value="0">ПК</option>
+				<option value="1">Android</option>
+				<option value="2">Все платформы</option>
 			</select>
 		</div>
 		<hr>
 		<div class="cost_result">
-			<p>Сроки<span>0</span></p>
-			<p>Стоимость<span>0</span></p>
+			<p>Сроки<span id="time">0</span></p>
+			<p>Стоимость<span id="cost">0</span></p>
 		</div>
 	</section></div>
 	<section class="statistics">
@@ -237,5 +237,6 @@
 		<p>Copyright © 2021 Вадим Мартыненко. Design by Web</p>
 	</section>
 	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>	

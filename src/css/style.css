@@ -1,5 +1,5 @@
 body{
-	font-family: Arial, sans-serif;
+	font-family: Franklin Gothic Medium, 'Franklin Gothic Medium', Arial, sans-serif;
 }
 nav{
 	width: 100%;
@@ -163,10 +163,10 @@ nav{
 	.title_cont input{
 		border: 2px solid #fff;
 	}
-	.title_cont h1, .title_cont h4, .title_cont input{
+	.title_cont{
 		position: relative;
 		color: #fff;
-		z-index: 2;
+		z-index: 3;
 	}
 	.main{
 		position: relative;
@@ -305,6 +305,14 @@ h2{
 	background: #eeeeee;
 	width: 100%;
 	margin: 10px 0;
+	color: #747474;
+	padding-left: 5px;
+}
+.cost_calculator option, .cost_calculator select{
+	font-size: 18px;
+}
+.cost_calculator option:not([disabled]){
+	color: #102031;
 }
 .cost_calculator h3{
 	margin-top: 10px;
@@ -542,8 +550,8 @@ h2{
 .cost_calculator{
 	box-shadow: 0px 0px 15px 0px #747474;
 	/*margin: 300px 27.9% 0 25.73%;*/
-	transform: scale(0) translate(-100%);
-	animation: to_screen 2.5s 11s forwards;
+	/*transform: scale(0) translate(-100%);*/
+	/*animation: to_screen 2.5s 11s forwards;*/
 	/*margin-left: -200%;*/
 }
 .statistics{
@@ -574,6 +582,9 @@ h2{
 }
 @media (max-width: 768px){
 	.what_i_can>.container{
+		max-width: 100%;
+	}
+	.cases .container{
 		max-width: 100%;
 	}
 }

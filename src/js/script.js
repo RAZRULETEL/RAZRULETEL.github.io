@@ -28,6 +28,7 @@ let calculator = {
 			return true;
 	}
 }
+/*
 let skip = false;
 if(confirm("Запустить подсчёт сроков и стоимости на promptах ?")){
 	siteTypePrompt();
@@ -132,7 +133,7 @@ function siteAdaptabilityPrompt(){
 			return;
 		}else
 			siteAdaptabilityPrompt();
-}
+}*/
 
 
 function onTypeChanged(){
@@ -167,3 +168,100 @@ function onConditionsChanged(){
 
 	}
 }
+
+let options = {threshold: 0};
+
+let observer = new IntersectionObserver(callback, options);
+
+let target = $('section');
+
+for(let item of target){
+	observer.observe(item);
+} 
+/*target.each(function(item, index){
+	observer.observe(index);
+});*/
+
+let options_stats = {threshold: 0.9};
+
+let observer_stats = new IntersectionObserver(call_stats, options_stats);
+
+observer_stats.observe($("section.statistics")[0]);
+
+function call_stats(entries, observer){
+	if(entries[0].isIntersecting){
+		console.log("+");
+  		fromTo($("#clients")[0], 0, 120);
+  		fromTo($("#hours")[0], 0, 4600);
+  		fromTo($("#projects")[0], 0, 340);
+  		fromTo($("#prizes")[0], 0, 23);
+  		observer_stats.unobserve($("section.statistics")[0]);
+  	}
+};
+
+function callback(entries, observer){
+  entries.forEach(entry => {
+  	if(entry.isIntersecting){
+  		//console.log(entry);
+  		entry.target.style.animation = "to_screen 1.7s forwards";
+  	}
+    //   entry.boundingClientRect
+    //   entry.intersectionRatio
+    //   entry.intersectionRect
+    //   entry.isIntersecting
+    //   entry.rootBounds
+    //   entry.target
+    //   entry.time
+  });
+};
+
+function rand(min, max){
+	// Returns a random integer from min to max:
+	Math.floor(Math.random() * max) + min;
+}
+
+function fromTo(object, from, to){
+	let i = from;
+	let k=1;
+	if(to>600){
+		while(3000/(to/k)<5){
+			k++;
+		}
+		
+	}
+	let cycle = setInterval(function() {
+		object.innerHTML = i;
+		if(i == to)
+			clearInterval(cycle);
+		i+=k;
+	},3000/(to-i));
+}
+$('a[href*="#"]').click(function(){
+	$('html, body').animate({scrollTop: $($(this).attr("href")).offset().top - 60 + "px"});
+})
+$(document).ready(function() {
+  $('.image-link').magnificPopup({type:'image'});
+});
+
+let img_observer = new IntersectionObserver(highResImg, options);
+
+for(let item of $(".img-loading")){
+	img_observer.observe(item);
+} 
+
+function highResImg(entries, observer){
+	entries.forEach(entry => {
+  	if(entry.isIntersecting){
+  		//console.log(entry.target.attributes["normal-resolution"].value);
+  		entry.target.src = entry.target.attributes["normal-resolution"].value;
+  		$(entry.target).removeClass("img-loading");
+  	}
+  });
+}
+
+setTimeout($.magnificPopup.open({
+  items: {
+      src: '#popup',
+      type: 'inline'
+  }
+}),30000);

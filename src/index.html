@@ -7,8 +7,15 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
 </head>
 <body>
+	<div id="popup" class="popup flex-wrap align-content-start">
+		<span class="title">Внимание</span>
+		<hr>
+		<img src="img/sale.png" alt="">
+		<span class="mx-3">Только для тебя выгодное предложение!<br>Скидка на первый заказ 20%!<br>Успей получить!<br>Закажи прямо сейчас!</span>
+	</div>
 	<!-- <div class="loading_screen"> -->
 		<!-- <div class="loader"></div> -->
 	</div>
@@ -18,14 +25,13 @@
 				<div class="row">
 					<div class="col-xxl-2 col-xl-3 col-lg-4 col-6"><div class="logo">Вадим Мартыненко</div></div>
 					<div class="col-xxl-6 col-xl-7 offset-xxl-4 offset-xl-2 offset-lg-0 col-lg-8 d-none d-lg-block">
-						<div class="menu"><ul>
-				<a href="#"><li>Обо мне</li></a>
-				<a href="#"><li>Услуги</li></a>
-				<a href="#"><li>Кейсы</li></a>
-				<a href="#"><li>Прайс</li></a>
-				<a href="#"><li>Отзывы</li></a>
-				<a href="#"><li>Контакты</li></a>
-				
+						<div class="menu"><ul class="d-flex">
+				<li><a href="#about_me">Обо мне</a></li>
+				<li><a href="#">Услуги</a></li>
+				<li><a href="#cases">Кейсы</a></li>
+				<li><a href="#price">Прайс</a></li>
+				<li><a href="#feedback">Отзывы</a></li>
+				<li><a href="#contacts">Контакты</a></li>
 							</ul>
 						</div>
 					</div>
@@ -62,11 +68,11 @@
 		</div>
 
 	</main>
-	<section class="about_me">
+	<section class="about_me" id="about_me">
 		<h2>Обо мне</h2>
 		<hr>
 		<div class="my_photo">
-			<img src="img\wb_boy.png" alt="">
+			<img src="img\wb_boy_lowRes.png" normal-resolution="img\wb_boy.png" alt="" class="img-loading">
 		</div>
 
 		<div class="about_me_text">
@@ -106,11 +112,38 @@
 		</div>
 		</div>
 	</section>
-	<section class="cases container d-flex d-lg-block flex-wrap">
+	<section class="cases container d-flex d-lg-block flex-wrap" id="cases">
 		<h2>Кейсы</h2>
 		<hr>
 		<h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, iure.</h5>
-		<img src="img\bg_cases.jpg" class="img-fluid" alt="">
+		<!-- <img src="img\bg_cases.jpg" class="img-fluid" alt=""> -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img\bg_cases.jpg" class="d-block w-100 image-link" alt="..." href="img\bg_cases.jpg">
+    </div>
+    <div class="carousel-item">
+      <img src="img\bg_cases.jpg" class="d-block w-100 image-link" alt="..." href="img\bg_cases.jpg">
+    </div>
+    <div class="carousel-item">
+      <img src="img\bg_cases.jpg" class="d-block w-100 image-link" alt="..." href="img\bg_cases.jpg">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
 		<div class="row">
 			<div class="client_site col-12 col-lg-3 d-flex d-lg-block align-items-baseline justify-content-md-between flex-wrap">
 			<h3>CLIENT:</h3>
@@ -129,7 +162,7 @@
 		</div>
 	</section>
 	<div class="container mt-5">
-	<section class="cost_calculator col-10 offset-1 p-4">
+	<section class="cost_calculator col-10 offset-1 p-4" id="price">
 		<div class="parameters">
 		 	<h2>Расчёт стоимости</h2>
 			<h3>Тип сайта</h3>
@@ -166,30 +199,62 @@
 		<div class="stats_bigcont container">
 			<div class="stats">
 				<img src="img\smile.png" alt="">
-				<h3>120</h3>
+				<h3 id="clients">0</h3>
 				<h5>Счастливых клиентов</h5>
 			</div>
 			<div class="stats">
 				<img src="img\orange_sign.png" alt="">
-				<h3>4,600</h3>
+				<h3 id="hours">0</h3>
 				<h5>Часов работы</h5>
 			</div>
 			<div class="stats">
 				<img src="img\mark.png" alt="">
-				<h3>340</h3>
+				<h3 id="projects">0</h3>
 				<h5>Проектов завершено</h5>
 			</div>
 			<div class="stats">
 				<img src="img\prize.png" alt="">
-				<h3>23</h3>
+				<h3 id="prizes">0</h3>
 				<h5>Наград получено</h5>
 			</div>
 		</div>
 	</section>
-	<section class="comments container mt-5">
+	<section class="comments container mt-5" id="feedback">
 		<h2>Отзывы</h2>
 		<hr>
-		<img src="img\comm_photo.png" alt="">
+		<div id="carouselCommentsIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselCommentsIndicators" data-bs-slide-to="0" class="active selected_comm" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselCommentsIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselCommentsIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img\comm_photo.png" alt="">
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam veniam aut aperiam dignissimos rerum, repellendus voluptas nemo, totam dolores perspiciatis.</p>
+		<p><span class="comm_author">Михаил,</span> Ген директор ПАО "Газпром".</p>
+    </div>
+    <div class="carousel-item">
+      <img src="img\comm_photo.png" alt="...">
+      <p>Lorem ipsum, dolor ipsum dolor sit amet consectetur, adipisicing elit. Aliquam veniam aut aperiam dignissimos rerum, repellendus voluptas nemo, totam dolores perspiciatis.</p>
+		<p><span class="comm_author">Александр,</span> Ген директор ПО "Белоруснефть".</p>
+    </div>
+    <div class="carousel-item">
+      <img src="img\comm_photo.png" alt="...">
+      <p>Lorem ipsum, dolor ipsum dolor sit amet consectetur, adipisicing elit. Aliquam veniam aut aperiam dignissimos rerum, repellendus voluptas nemo, totam dolores perspiciatis.</p>
+		<p><span class="comm_author">Герман,</span> Ген директор ПАО "Сбербанк".</p>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselCommentsIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselCommentsIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+		<div class="d-none"><img src="img\comm_photo.png" alt="">
 		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam veniam aut aperiam dignissimos rerum, repellendus voluptas nemo, totam dolores perspiciatis.</p>
 		<p><span class="comm_author">Михаил,</span> Ген директор ПАО "Газпром".</p>
 		<div class="comm_page_cont">
@@ -197,8 +262,9 @@
 			<div class="inactive_comm_page"></div>
 			<div class="inactive_comm_page"></div>
 		</div>
+	</div>
 	</section>
-	<section class="contacts mt-5">
+	<section class="contacts mt-5" id="contacts">
 		<div class="container">
 		<h2>Мои контакты</h2>
 		<hr>
@@ -236,6 +302,9 @@
 	<section class="copyright">
 		<p>Copyright © 2021 Вадим Мартыненко. Design by Web</p>
 	</section>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/script.js"></script>
 </body>

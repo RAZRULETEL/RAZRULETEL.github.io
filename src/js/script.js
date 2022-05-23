@@ -259,9 +259,9 @@ function highResImg(entries, observer){
   });
 }
 
-setTimeout($.magnificPopup.open({
+/*setTimeout($.magnificPopup.open({
   items: {
       src: '#popup',
       type: 'inline'
   }
-}),30000);
+}),30000);*/

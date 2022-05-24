@@ -1,0 +1,155 @@
+header {
+	width: 100%;
+	height: 100vh;
+	background-color: var(--black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: nowrap row;
+}
+
+nav {
+	width: auto;
+	height: auto;
+	padding: 10px;
+	position: absolute;
+	right: 20%;
+	top: 2%;
+	z-index: 100;	
+}
+nav a {
+	color: var(--white);
+	font-family: "Poppins", sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding: 10px;	
+	transition: .2s;
+	border-radius: 5px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+nav a:hover{
+	color: var(--black);
+	background-color: var(--white);
+}
+.header__a {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row nowrap;
+
+}
+.header__about {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-flow: column nowrap;
+}
+.header__about_text{
+	width: 100%;
+	height: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	flex-flow: column nowrap;
+}
+.header__about_text h1 {
+	font-family: "Poppins", sans-serif;
+	font-size: 53px;
+	font-weight: 700;
+	padding: 10px;
+
+}
+.header__about_text p {
+	font-family: "Montserra", sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 10px;
+	margin: 10px;
+	text-align: justify-all;
+}
+.header__about_buttons {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row nowrap;
+}
+.header__about_buttons button {
+	padding: 10px;
+	margin: 30px 40px;
+	border-radius:40px;
+	width: 200px;
+	height: 60px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	transition: .2s;
+	cursor: pointer;
+}
+
+.header__about_buttons1 {
+	background: var(--green);
+	color: var(--white);
+}
+.header__about_buttons2 {
+	background: var(--white);
+	color: var(--black);
+}
+
+.header__about_buttons1:hover {
+	background-color: var(--white);
+	color: var(--green);
+	border: 1px solid var(--green);
+}
+
+.header__about_buttons2:hover {
+	background-color: var(--green);
+	color: var(--black);
+	border: 1px solid var(--white);
+}
+
+.header_photo {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header_photo::before {
+	content: '';
+	position: absolute;
+	width: 500px;
+	height: 650px;
+	background: var(--green);
+	z-index: -1;
+	margin: -250px -250px 0 0;
+}
+.header_photo::after {
+	content: '';
+	position: absolute;
+	width: 500px;
+	height: 650px;
+	background-color: var(--green);
+	z-index: -1;
+	border-radius: 10px 10px 10px 10px;
+	margin: 0 0 -250px -250px;
+}
+
+.header_photo_img {
+	overflow: hidden;
+	display: inline-block;
+}
+.header_photo_img img {
+	width: 500px;
+	height: 333px;
+	border-radius: 5px;
+}

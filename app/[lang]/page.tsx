@@ -1,6 +1,7 @@
 import {getDictionary} from "@/app/[lang]/dictionaries";
 import MainScreen from "@/app/[lang]/screens/main";
 import footer_waves from "@/public/footer-waves.svg";
+import ProjectsScreen from "@/app/[lang]/screens/projects";
 
 export default async function Home({params}: { params: Promise<{ lang: string }> }) {
 	const {lang} = await params;
@@ -9,6 +10,7 @@ export default async function Home({params}: { params: Promise<{ lang: string }>
 	return (
 		<>
 			<MainScreen dict={dict}/>
+			<ProjectsScreen dict={dict}/>
 			<footer><img src={footer_waves.src}/></footer>
 		</>
 	);

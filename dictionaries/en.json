@@ -5,5 +5,14 @@
 	"specialization_1": "Web Developer",
 	"specialization_2": "Full Stack Developer",
 	"about_me__title": "About me",
-	"about_me": "I am a tech enthusiast with experience in web and desktop app development. I enjoy exploring new technologies. I love to dive into project requirements and fulfill them using modern technologies. I also have skills in solving algorithmic problems and have a 4 rank on CodeWars."
+	"about_me": "I am a tech enthusiast with experience in web and desktop app development. I enjoy exploring new technologies. I love to dive into project requirements and fulfill them using modern technologies. I also have skills in solving algorithmic problems and have a 4 rank on CodeWars.",
+	"visit": "Visit",
+	"post_in": "Post in",
+
+	"my_projects": "My projects",
+	"aitip": "AILaL",
+	"aitip_about": "A new website for the Altai Institute of Labor and Law, developed by a team of enthusiasts. The feature of the project is a custom CMS system for creating pages from blocks, as well as editing them.",
+
+	"foodate": "FooDate",
+	"foodate_about": "An application that will help you keep track of the contents of your refrigerator. It will also help you create a shopping list and suggest what you can cook."
 }

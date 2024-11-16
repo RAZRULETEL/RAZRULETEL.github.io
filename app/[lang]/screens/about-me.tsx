@@ -1,8 +1,7 @@
 'use client';
 import styles from "@/app/[lang]/page.module.css";
 import {useEffect, useRef} from "react";
-
-const ANIMATION_OFFSET = 100;
+import {ANIMATION_OFFSET} from "@/app/globals";
 
 export default function AboutMeScreen({dict}: { dict: { [key: string]: string } }) {
 	const section = useRef<HTMLDivElement>(null);

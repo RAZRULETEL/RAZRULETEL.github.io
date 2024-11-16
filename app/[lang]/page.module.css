@@ -126,3 +126,32 @@
 		opacity: 0.3;
 	}
 }
+
+.about_me{
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
+	background: var(--background);
+	padding: 20px 3vw 0 3vw;
+	font-size: 18px;
+}
+
+.about_me > * {
+	opacity: 0;
+	transform: translate3d(0, 100px, 0);
+}
+
+.section_title {
+	color: var(--foreground);
+	font-size: 40px;
+	text-align: center;
+}
+
+.section_active {
+	opacity: 1;
+	transform: translateZ(0);
+}
+
+.about_me__text {
+	margin-top: 20px;
+}

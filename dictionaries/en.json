@@ -3,5 +3,7 @@
 	"full_name": "Vadim Martynenko",
 	"first_person": "I'm",
 	"specialization_1": "Web Developer",
-	"specialization_2": "Full Stack Developer"
+	"specialization_2": "Full Stack Developer",
+	"about_me__title": "About me",
+	"about_me": "I am a tech enthusiast with experience in web and desktop app development. I enjoy exploring new technologies. I love to dive into project requirements and fulfill them using modern technologies. I also have skills in solving algorithmic problems and have a 4 rank on CodeWars."
 }

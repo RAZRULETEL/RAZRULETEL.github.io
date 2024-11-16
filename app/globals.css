@@ -1,6 +1,10 @@
 :root {
     --background: #ffffff;
     --foreground: #171717;
+
+	--fast-transition: 0.2s;
+	--medium-transition: 0.4s;
+	--slow-transition: 0.8s;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,6 +32,7 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+	transition: var(--fast-transition);
 }
 
 a {

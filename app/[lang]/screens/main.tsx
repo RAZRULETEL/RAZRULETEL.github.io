@@ -6,7 +6,7 @@ import telegram_logo from "@/public/telegram.svg";
 import resume_logo from "@/public/resume.svg";
 
 
-export default function MainScreen({dict}: {dict: {[key: string]: string}}) {
+export default function MainScreen({dict}: { dict: { [key: string]: string } }) {
 	return (
 		<section className={styles.main}>
 			<h1 className={styles.title}>{dict.full_name}</h1>
@@ -22,7 +22,8 @@ export default function MainScreen({dict}: {dict: {[key: string]: string}}) {
 					<img src={email_logo.src} alt="Email"/>
 				</a>
 				<a href="https://t.me/razruletel" title="Telegram"><img src={telegram_logo.src} alt="Telegram"/></a>
-				<a href="https://t.me/razruletel" title="Resume"><img src={resume_logo.src} alt="Resume"/></a>
+				<a href="https://drive.google.com/file/d/1INXt5KoztVIIWWyVNkRyEYRPsOmNqrFw/view?usp=drive_link"
+				   title="Resume"><img src={resume_logo.src} alt="Resume"/></a>
 			</div>
 			<div className={styles.main__rect1}></div>
 			<div className={styles.main__rect2}></div>

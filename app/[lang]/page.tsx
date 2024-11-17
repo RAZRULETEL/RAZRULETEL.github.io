@@ -17,7 +17,7 @@ export default async function Home({params}: { params: Promise<{ lang: string }>
 			<WorkExperienceScreen dict={dict}/>
 			<SkillsScreen dict={dict}/>
 			<ContactsScreen dict={dict}/>
-			<footer><img src={footer_waves.src}/></footer>
+			<footer style={{display: 'flex'}}><img src={footer_waves.src}/></footer>
 		</>
 	);
 }

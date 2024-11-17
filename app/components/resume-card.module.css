@@ -1,0 +1,58 @@
+.resume_card {
+	display: grid;
+	grid-template-columns: 25px 1fr;
+	gap: 20px;
+	padding-bottom: 20px;
+}
+
+.resume_card__path {
+	position: relative;
+	width: 100%;
+	margin-bottom: -20px;
+}
+
+.resume_card__path::before {
+	aspect-ratio: 1/1;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(100% - 6px);
+	background: var(--background);
+	border-radius: 100%;
+	border: 3px solid var(--accent-color);
+	z-index: -1;
+}
+
+.resume_card__path::after {
+	aspect-ratio: 1/1;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: calc(50% - 2px);
+	height: 100%;
+	width: 0;
+	background: transparent;
+	border: 2px solid var(--accent-color);
+	z-index: -2;
+}
+
+.resume_card__title {
+	color: var(--accent-color);
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.resume_card__dates {
+	opacity: 0.8;
+}
+
+.resume_card__description {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.resume_card__achievements_list {
+	margin-top: 5px;
+	margin-left: 25px;
+}

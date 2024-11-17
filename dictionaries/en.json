@@ -8,11 +8,37 @@
 	"about_me": "I am a tech enthusiast with experience in web and desktop app development. I enjoy exploring new technologies. I love to dive into project requirements and fulfill them using modern technologies. I also have skills in solving algorithmic problems and have a 4 rank on CodeWars.",
 	"visit": "Visit",
 	"post_in": "Post in",
+	"frontend_dev": "Frontend Developer",
+	"fullstack_dev": "Full Stack Developer",
 
 	"my_projects": "My projects",
 	"aitip": "AILaL",
 	"aitip_about": "A new website for the Altai Institute of Labor and Law, developed by a team of enthusiasts. The feature of the project is a custom CMS system for creating pages from blocks, as well as editing them.",
 
 	"foodate": "FooDate",
-	"foodate_about": "An application that will help you keep track of the contents of your refrigerator. It will also help you create a shopping list and suggest what you can cook."
+	"foodate_about": "An application that will help you keep track of the contents of your refrigerator. It will also help you create a shopping list and suggest what you can cook.",
+
+	"resume__title": "Resume",
+	"education": "Education",
+	"education__specialization": "Computer Engineering",
+	"education__university": "ITMO University, St. Petersburg, Russia",
+	"achievements": "Achievements",
+	"work_experience": "Work Experience",
+	"codewars_rank": "4kyu rank on CodeWars",
+	"sport_section_manager": "Sports Section Manager",
+	"sport_section_manager__description": "Completed training at ITMO University and organized sports events for audiences of up to 300 people.",
+	"present": "present",
+	"aitip_achievement_1": "Developed a component for selecting and uploading photos/videos/images for a block constructor.",
+	"aitip_achievement_2": "Developed a student filter panel with 3 criteria.",
+	"aitip_achievement_3": "Developed footer, header, image carousel, and page navigation panel.",
+	"aitip_achievement_4": "Adapted the components and pages I developed for mobile devices.",
+	"foodate_achievement_1": "Implemented authentication with a refresh token, infinite product card feed with infinite scrolling.",
+	"foodate_achievement_2": "Implemented full client-side product management to speed up application response using Zustand context manager.",
+	"foodate_achievement_3": "Led a team of 2 people.",
+	"foodate_achievement_4": "Configured font and image optimization, authentication, and dynamic routing on Next.js.",
+	"allsee_achievement_1": "Configured Docker and Nginx on a clean Linux server, wrote Dockerfile and docker-compose files.",
+	"allsee_achievement_2": "Designed a database for a social network focused on developers.",
+	"allsee_achievement_3": "Set up CI/CD for building, testing, and deploying Frontend and Backend components using GitHub Actions.",
+	"university": "University",
+	"university_discipline__description": "Completed the courses \"Algorithms and Data Structures\" and \"Web Programming\" with GPA of 5.0, at ITMO University."
 }

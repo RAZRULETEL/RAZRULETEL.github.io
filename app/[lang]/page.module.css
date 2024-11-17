@@ -123,6 +123,13 @@
 	}
 }
 
+.about_me > *, .projects > *, .resume > *, .resume__column > * {
+	opacity: 0;
+	transform: translate3d(0, 100px, 0);
+	transition: var(--medium-transition);
+}
+
+/********************* ABOUT ME SCREEN *********************/
 .about_me {
 	overflow: hidden;
 	position: relative;
@@ -130,12 +137,6 @@
 	background: var(--background);
 	padding: 20px 3vw 0 3vw;
 	font-size: 18px;
-}
-
-.about_me > *, .projects > * {
-	opacity: 0;
-	transform: translate3d(0, 100px, 0);
-	transition: var(--medium-transition);
 }
 
 .section_title {
@@ -148,6 +149,7 @@
 	margin-top: 24px;
 }
 
+/********************* PROJECTS SCREEN *********************/
 .projects {
 	overflow: hidden;
 	position: relative;
@@ -237,4 +239,26 @@
 .section_active {
 	opacity: 1;
 	transform: translateZ(0);
+}
+
+/********************* WORK EXPERIENCE SCREEN *********************/
+.resume {
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
+	background: var(--background);
+	font-size: 18px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 20px 5vw 0 5vw;
+}
+
+.resume__discipline_name {
+	font-size: 24px;
+	margin: 40px 0 20px 13px;
+}
+
+.resume__link {
+	text-decoration: underline;
+	font-weight: normal;
 }

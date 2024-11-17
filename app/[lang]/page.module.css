@@ -123,7 +123,7 @@
 	}
 }
 
-.about_me > *, .projects > *, .resume > *, .resume__column > * {
+.about_me > *, .projects > *, .resume > *, .resume__column > *, .contacts > * {
 	opacity: 0;
 	transform: translate3d(0, 100px, 0);
 	transition: var(--medium-transition);
@@ -261,4 +261,95 @@
 .resume__link {
 	text-decoration: underline;
 	font-weight: normal;
+}
+
+/********************* CONTACTS SCREEN *********************/
+.contacts {
+	margin-top: 40px;
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
+	background: var(--background);
+}
+
+.contacts__container {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	height: 15vh;
+}
+
+.contacts__container * {
+	max-height: 15vh;
+}
+
+.contacts__container > * {
+	display: flex;
+	flex-direction: row;
+	padding: 3vh 2vw;
+	justify-content: space-between;
+	gap: 1vw;
+	font-size: 60px;
+	align-items: center;
+	font-weight: bold;
+}
+
+.contacts__container > *:hover {
+	filter: brightness(0.8);
+	cursor: pointer;
+}
+
+.contacts__container img {
+	width: 9vh;
+	height: 9vh;
+}
+
+.contacts__github {
+	background: #363636;
+}
+
+.contacts__telegram {
+	background: #1da1f2;
+}
+
+.contacts__email {
+	background: #10ba46;
+}
+
+@media screen and (max-width: 1200px) {
+	.contacts__container > * {
+		font-size: 40px;
+	}
+
+	.contacts__container img {
+		max-height: 70px;
+		max-width: 70px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.contacts__container > * {
+		font-size: 20px;
+	}
+
+	.contacts__container img {
+		max-height: 50px;
+		max-width: 50px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.contacts__container {
+		grid-template-columns: 1fr;
+		height: auto;
+	}
+
+	.contacts__container > * {
+		font-size: 40px;
+	}
+
+	.contacts__container img {
+		max-height: 70px;
+		max-width: 70px;
+	}
 }

@@ -40,5 +40,7 @@
 	"allsee_achievement_2": "Designed a database for a social network focused on developers.",
 	"allsee_achievement_3": "Set up CI/CD for building, testing, and deploying Frontend and Backend components using GitHub Actions.",
 	"university": "University",
-	"university_discipline__description": "Completed the courses \"Algorithms and Data Structures\" and \"Web Programming\" with GPA of 5.0, at ITMO University."
+	"university_discipline__description": "Completed the courses \"Algorithms and Data Structures\" and \"Web Programming\" with GPA of 5.0, at ITMO University.",
+
+	"contacts__title": "Contacts"
 }

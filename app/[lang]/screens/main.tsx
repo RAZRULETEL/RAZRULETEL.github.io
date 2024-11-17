@@ -17,13 +17,13 @@ export default function MainScreen({dict}: { dict: { [key: string]: string } }) 
 					</span>
 			</p>
 			<div className={styles.links}>
-				<a href="https://github.com/RAZRULETEL" title="GitHub"><img src={github_logo.src} alt="GitHub"/></a>
-				<a href="mailto:qwerty.qwertlain@gmail.com" title="Email">
+				<a href="https://github.com/RAZRULETEL" title="GitHub" target="_blank"><img src={github_logo.src} alt="GitHub"/></a>
+				<a href="mailto:qwerty.qwertlain@gmail.com" title="Email" target="_blank">
 					<img src={email_logo.src} alt="Email"/>
 				</a>
-				<a href="https://t.me/razruletel" title="Telegram"><img src={telegram_logo.src} alt="Telegram"/></a>
+				<a href="https://t.me/razruletel" title="Telegram" target="_blank"><img src={telegram_logo.src} alt="Telegram"/></a>
 				<a href="https://drive.google.com/file/d/1INXt5KoztVIIWWyVNkRyEYRPsOmNqrFw/view?usp=drive_link"
-				   title="Resume"><img src={resume_logo.src} alt="Resume"/></a>
+				   title="Resume" target="_blank"><img src={resume_logo.src} alt="Resume"/></a>
 			</div>
 			<div className={styles.main__rect1}></div>
 			<div className={styles.main__rect2}></div>

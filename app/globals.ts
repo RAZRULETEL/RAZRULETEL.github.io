@@ -1,2 +1,2 @@
 
-export const ANIMATION_OFFSET = 100;
+export const ANIMATION_OFFSET = 150;

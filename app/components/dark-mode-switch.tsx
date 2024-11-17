@@ -5,9 +5,13 @@ import moon from "@/public/moon.svg";
 
 
 export default function DarkModeSwitch() {
-	const [isDarkMode, setIsDarkMode] = useState(false);
+	const [isDarkMode, setIsDarkMode] = useState(true);
 
 	useLayoutEffect(() => {
+		if(localStorage.getItem('theme')) {
+			setIsDarkMode(localStorage.getItem('theme') === 'dark');
+			return;
+		}
 		if (window.matchMedia)
 			setIsDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
 	}, []);
@@ -15,8 +19,10 @@ export default function DarkModeSwitch() {
 	useLayoutEffect(() => {
 		if (isDarkMode) {
 			document.documentElement.setAttribute('data-theme', 'dark');
+			localStorage.setItem('theme', 'dark');
 		} else {
 			document.documentElement.setAttribute('data-theme', 'light');
+			localStorage.setItem('theme', 'light');
 		}
 	}, [isDarkMode]);
 

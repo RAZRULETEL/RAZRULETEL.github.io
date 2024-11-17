@@ -19,7 +19,7 @@ export default function WorkExperienceScreen({dict}: { dict: { [key: string]: st
 				<h5 className={styles.resume__discipline_name}>{dict.achievements}</h5>
 				<ResumeCard title={dict.codewars_rank}
 							dates={'04.2022 - ' + dict.present}
-							description={<a className={styles.resume__link}
+							description={<a className={styles.resume__link} style={{wordBreak: 'break-word'}}
 											href="https://www.codewars.com/users/RAZRULETEL">https://www.codewars.com/users/RAZRULETEL</a>}/>
 				<ResumeCard title={dict.sport_section_manager}
 							dates={'02.2024 - ' + dict.present}

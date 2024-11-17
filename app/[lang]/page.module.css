@@ -129,6 +129,18 @@
 	transition: var(--medium-transition);
 }
 
+.section_title {
+	color: var(--foreground);
+	font-size: 40px;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+	.section_title {
+		font-size: 30px;
+	}
+}
+
 /********************* ABOUT ME SCREEN *********************/
 .about_me {
 	overflow: hidden;
@@ -137,12 +149,6 @@
 	background: var(--background);
 	padding: 20px 3vw 0 3vw;
 	font-size: 18px;
-}
-
-.section_title {
-	color: var(--foreground);
-	font-size: 40px;
-	text-align: center;
 }
 
 .about_me__text {
@@ -261,6 +267,13 @@
 .resume__link {
 	text-decoration: underline;
 	font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+	.resume {
+		display: block;
+		font-size: 16px;
+	}
 }
 
 /********************* CONTACTS SCREEN *********************/
@@ -411,7 +424,7 @@
 	}
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
 	.skills__grid {
 		grid-template-columns: repeat(2, 1fr);
 	}

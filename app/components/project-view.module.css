@@ -3,6 +3,11 @@
 	flex-direction: row;
 	gap: 5vw;
 	margin: 20px 5vw 20px 5vw;
+	font-size: 18px;
+}
+
+.project_view_reverse {
+	flex-direction: row-reverse;
 }
 
 .image {
@@ -41,4 +46,20 @@
 	margin: auto;
 	padding: 7px 15px;
 	box-shadow: 7px 7px 0 1px var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+	.content__title {
+		font-size: 20px;
+	}
+
+	.project_view {
+		flex-direction: column;
+		font-size: 16px;
+	}
+
+	.image {
+		margin: 20px 0 60px 0;
+		max-width: 80vw;
+	}
 }

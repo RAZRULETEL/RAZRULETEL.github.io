@@ -29,6 +29,7 @@
 .title {
 	font-size: 70px;
 	z-index: 2;
+	text-align: center;
 }
 
 .description {
@@ -135,9 +136,58 @@
 	text-align: center;
 }
 
+@media screen and (max-width: 1200px) {
+	.main__rect2{
+		height: 50vh;
+	}
+}
+
 @media screen and (max-width: 768px) {
+	.main {
+		background-size: cover;
+		background-position: center;
+	}
+
+	.title {
+		font-size: 50px;
+	}
+
 	.section_title {
 		font-size: 30px;
+	}
+
+	.main__rect2{
+		height: 35vh;
+	}
+	.main__rect2::before {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.section_title {
+		font-size: 30px;
+	}
+
+	.title {
+		font-size: 40px;
+		width: 100%;
+	}
+
+	.main {
+		background-position: center;
+		padding: 0 15px;
+	}
+
+	.description {
+		font-size: 30px;
+		text-align: center;
+		width: 100%;
+	}
+
+	.links {
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 

@@ -1,9 +1,8 @@
 import { match } from '@formatjs/intl-localematcher'
 import {NextRequest, NextResponse} from "next/server";
 import Negotiator from 'negotiator'
+import {locales} from "@/app/globals";
 
-
-const locales = ['ru-RU', 'en-US'];
 const defaultLocale = 'ru-RU';
 
 // Get the preferred locale

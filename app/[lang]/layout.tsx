@@ -1,6 +1,8 @@
 import "../globals.css";
 import {getDictionary} from "@/app/[lang]/dictionaries";
 import DarkModeSwitch from "@/app/components/dark-mode-switch";
+import LanguageSwitch from "@/app/components/language-switch";
+import {locales} from "@/app/globals";
 
 export async function generateMetadata({ params }: {params: Promise<{lang: string}>}) {
 	const { lang } = await params;
@@ -12,7 +14,7 @@ export async function generateMetadata({ params }: {params: Promise<{lang: strin
 }
 
 export async function generateStaticParams() {
-	return [{ lang: 'en-US' }, { lang: 'ru-RU' }]
+	return locales.map(e => ({lang: e}))
 }
 
 export default async function RootLayout({ children, params }:
@@ -24,6 +26,7 @@ export default async function RootLayout({ children, params }:
         <body>
         {children}
 		<DarkModeSwitch/>
+		<LanguageSwitch lang={lang}/>
         </body>
         </html>
     );

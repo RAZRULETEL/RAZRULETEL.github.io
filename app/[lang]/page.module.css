@@ -114,14 +114,13 @@
 	scale: 1 0.7;
 }
 
-@media (prefers-color-scheme: light) {
-	.links a img {
-		filter: invert(1);
-	}
 
-	.main::before {
-		opacity: 0.3;
-	}
+[data-theme=light] .links a img {
+	filter: invert(1);
+}
+
+[data-theme=light] .main::before {
+	opacity: 0.3;
 }
 
 .about_me > *, .projects > *, .resume > *, .resume__column > *, .contacts > *, .skills > *, .skills__grid > * {
@@ -137,7 +136,7 @@
 }
 
 @media screen and (max-width: 1200px) {
-	.main__rect2{
+	.main__rect2 {
 		height: 50vh;
 	}
 }
@@ -156,9 +155,12 @@
 		font-size: 30px;
 	}
 
-	.main__rect2{
-		height: 35vh;
+	.main__rect2 {
+		height: 350px;
+		left: 0;
+		rotate: 33deg;
 	}
+
 	.main__rect2::before {
 		margin: 0;
 	}
@@ -188,6 +190,10 @@
 	.links {
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.main__rect1 {
+		display: none;
 	}
 }
 
@@ -340,6 +346,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	height: 15vh;
+	color: white;
 }
 
 .contacts__container * {
@@ -365,6 +372,7 @@
 .contacts__container img {
 	width: 9vh;
 	height: 9vh;
+	opacity: 0.7;
 }
 
 .contacts__github {
@@ -485,7 +493,7 @@
 	}
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 450px) {
 	.skills__card {
 		min-width: 140px;
 		height: 56px;

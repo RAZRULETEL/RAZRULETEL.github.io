@@ -1,6 +1,6 @@
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+	--background: #ffffff;
+	--foreground: #171717;
 
 	--fast-transition: 0.2s;
 	--medium-transition: 0.4s;
@@ -9,44 +9,41 @@
 	--accent-color: #03A9F4;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
+:root[data-theme=dark] {
+	--background: #0a0a0a;
+	--foreground: #ededed;
 
-		--accent-color: #9C27B0;
-    }
+	--accent-color: #9C27B0;
 }
 
 html,
 body {
-    max-width: 100vw;
-    overflow-x: hidden;
+	max-width: 100vw;
+	overflow-x: hidden;
 }
 
 body {
-    color: var(--foreground);
-    background: var(--background);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	color: var(--foreground);
+	background: var(--background);
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	line-height: 1.5;
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 	transition: var(--fast-transition);
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
+
+html[data-theme=dark] {
+	color-scheme: dark;
 }

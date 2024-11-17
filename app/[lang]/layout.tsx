@@ -1,5 +1,6 @@
 import "../globals.css";
 import {getDictionary} from "@/app/[lang]/dictionaries";
+import DarkModeSwitch from "@/app/components/dark-mode-switch";
 
 export async function generateMetadata({ params }: {params: Promise<{lang: string}>}) {
 	const { lang } = await params;
@@ -19,9 +20,10 @@ export default async function RootLayout({ children, params }:
 	const { lang } = await params;
 
 	return (
-        <html lang={lang}>
+        <html lang={lang} data-theme='dark'>
         <body>
         {children}
+		<DarkModeSwitch/>
         </body>
         </html>
     );

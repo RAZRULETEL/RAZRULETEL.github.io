@@ -3,36 +3,13 @@ import styles from "./../page.module.css";
 import ProjectView from "@/app/components/project-view";
 import aitip_main from "@/public/projects/aitip_main.png";
 import foodate_main from "@/public/projects/foodate_main.png";
-import {useEffect, useRef} from "react";
-import {ANIMATION_OFFSET} from "@/app/globals";
+import useAnimation from "@/app/components/use-animation";
 
 export default function ProjectsScreen({dict}: { dict: { [key: string]: string } }) {
-	const section = useRef<HTMLDivElement>(null);
-
-	useEffect(() => {
-		if (!section.current) return;
-		const sectionEl = section.current;
-
-		const scrollListener = () => {
-			for (const child of sectionEl.children) {
-				const screenOffsetTop = sectionEl.getBoundingClientRect().y
-					+ (child as HTMLElement).offsetTop
-					- window.innerHeight;
-				if (screenOffsetTop + ANIMATION_OFFSET < 0) {
-					child.classList.add(styles.section_active);
-				} else {
-					child.classList.remove(styles.section_active);
-				}
-			}
-		}
-		scrollListener();
-		window.addEventListener('scroll', scrollListener);
-		return () => window.removeEventListener('scroll', scrollListener);
-	}, [section]);
-
+	const animateSection = useAnimation();
 
 	return (
-		<section className={styles.projects} ref={section}>
+		<section className={styles.projects} ref={animateSection}>
 			<h2 className={styles.section_title + ' ' + styles.projects__title}>{dict.my_projects}</h2>
 			<ProjectView img={aitip_main.src} title={dict.aitip} accentColor='blue'>
 				<p className={styles.projects__text}>{dict.aitip_about}</p>

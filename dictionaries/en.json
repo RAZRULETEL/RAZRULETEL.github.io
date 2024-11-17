@@ -42,5 +42,7 @@
 	"university": "University",
 	"university_discipline__description": "Completed the courses \"Algorithms and Data Structures\" and \"Web Programming\" with GPA of 5.0, at ITMO University.",
 
-	"contacts__title": "Contacts"
+	"contacts__title": "Contacts",
+
+	"skills__title": "My skills"
 }

@@ -1,12 +1,12 @@
-import "../globals.css";
+import "./globals.css";
 import {getDictionary} from "@/app/[lang]/dictionaries";
 import DarkModeSwitch from "@/app/components/dark-mode-switch";
 import LanguageSwitch from "@/app/components/language-switch";
-import {locales} from "@/app/globals";
+import {defaultLocale, locales} from "@/app/globals";
 
 export async function generateMetadata({ params }: {params: Promise<{lang: string}>}) {
 	const { lang } = await params;
-	const dict = await getDictionary(lang)
+	const dict = await getDictionary(lang || defaultLocale)
 
 	return {
 		title: dict.title

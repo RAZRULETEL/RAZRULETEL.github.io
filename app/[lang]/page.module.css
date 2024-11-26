@@ -1,7 +1,7 @@
 .main {
 	background: linear-gradient(90deg, var(--background) calc(100vw - 100vh * 3 / 4), #00000000 100%), url('../../public/photo_bg.jpg') no-repeat right center fixed;
 	background-size: contain;
-	height: 100vh;
+	height: 100lvh;
 	width: 100%;
 	display: flex;
 	align-items: flex-end;

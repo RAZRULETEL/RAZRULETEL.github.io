@@ -17,16 +17,15 @@ export async function generateStaticParams() {
 	return locales.map(e => ({lang: e}))
 }
 
-export default async function RootLayout({ children, params }:
-	Readonly<{children: React.ReactNode; params: Promise<{lang: string}>}>) {
-	const { lang } = await params;
+export default async function RootLayout({ children }:
+	Readonly<{children: React.ReactNode}>) {
 
 	return (
-        <html lang={lang} data-theme='dark'>
+        <html data-theme='dark'>
         <body>
         {children}
 		<DarkModeSwitch/>
-		<LanguageSwitch lang={lang}/>
+		<LanguageSwitch/>
         </body>
         </html>
     );

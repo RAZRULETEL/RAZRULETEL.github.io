@@ -2,7 +2,7 @@ import {getDictionary} from "@/app/[lang]/dictionaries";
 import MainScreen from "@/app/[lang]/screens/main";
 import footer_waves from "@/public/footer-waves.svg";
 import ProjectsScreen from "@/app/[lang]/screens/projects";
-import WorkExperienceScreen from "@/app/[lang]/screens/resume";
+import WorkExperienceScreen from "@/app/[lang]/screens/work-experience";
 import ContactsScreen from "@/app/[lang]/screens/contacts";
 import SkillsScreen from "@/app/[lang]/screens/skills";
 import {defaultLocale} from "@/app/globals";

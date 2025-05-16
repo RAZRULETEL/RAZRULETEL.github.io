@@ -325,6 +325,10 @@
 	font-weight: normal;
 }
 
+.normal_weight {
+	font-weight: normal;
+}
+
 @media screen and (max-width: 768px) {
 	.resume {
 		display: block;

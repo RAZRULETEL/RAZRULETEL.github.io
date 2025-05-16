@@ -1,5 +1,4 @@
 'use client';
-
 import {useEffect, useRef} from "react";
 import {ANIMATION_OFFSET} from "@/app/globals";
 import styles from "@/app/[lang]/page.module.css";

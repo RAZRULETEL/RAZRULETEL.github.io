@@ -1,8 +1,15 @@
 import styles from './resume-card.module.css'
 import React from "react";
 
-export default function ResumeCard({title, dates, description, achievements, style}:
-									   { title: string, dates: string, description: React.ReactNode, achievements?: string[], style?: React.CSSProperties }) {
+interface ResumeCardProps {
+	title: string;
+	dates: string;
+	description: React.ReactNode;
+	achievements?: string[];
+	style?: React.CSSProperties;
+}
+
+export default function ResumeCard({title, dates, description, achievements, style}: ResumeCardProps) {
 
 
 	return (

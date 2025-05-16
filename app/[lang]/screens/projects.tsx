@@ -3,6 +3,7 @@ import styles from "./../page.module.css";
 import ProjectView from "@/app/components/project-view";
 import aitip_main from "@/public/projects/aitip_main.png";
 import foodate_main from "@/public/projects/foodate_main.png";
+import fundex_main from "@/public/projects/fundex_main.png";
 import useAnimation from "@/app/components/use-animation";
 
 export default function ProjectsScreen({dict}: { dict: { [key: string]: string } }) {
@@ -27,6 +28,9 @@ export default function ProjectsScreen({dict}: { dict: { [key: string]: string }
 					   className={styles.projects__visit}>{dict.post_in} VK →</a>
 					<a href='https://foodate.ru' className={styles.projects__visit}>{dict.visit + ' →'}</a>
 				</div>
+			</ProjectView>
+			<ProjectView img={fundex_main.src} title={dict.fundex} accentColor='#130622'>
+				<p className={styles.projects__text}>{dict.fundex_about}</p>
 			</ProjectView>
 		</section>
 	)

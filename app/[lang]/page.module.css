@@ -218,6 +218,7 @@
 	z-index: 3;
 	background: var(--background);
 	font-size: 18px;
+	padding-bottom: max(3vw, 3vh);
 }
 
 .projects__title {

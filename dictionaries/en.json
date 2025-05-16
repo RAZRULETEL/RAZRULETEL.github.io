@@ -19,6 +19,9 @@
 	"foodate": "FooDate",
 	"foodate_about": "An application that will help you keep track of the contents of your refrigerator. It will also help you create a shopping list and suggest what you can cook.",
 
+	"fundex": "Fundex",
+	"fundex_about": "An MVP of a crowdfunding platform designed for investments and donations to various projects. Unlike Kickstarter, it is specifically adapted for the Russian-speaking audience.",
+
 	"work_experience__title": "Work experience",
 	"education": "Education",
 	"education__specialization": "Computer Engineering",

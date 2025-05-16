@@ -123,7 +123,7 @@
 	opacity: 0.3;
 }
 
-.about_me > *, .projects > *, .resume > *, .resume__column > *, .contacts > *, .skills > *, .skills__grid > * {
+.about_me > *, .projects > *, .work_experience > *, .work_experience__column > *, .contacts > *, .skills > *, .skills__grid > * {
 	opacity: 0;
 	transform: translate3d(0, 100px, 0);
 	transition: var(--medium-transition);
@@ -304,7 +304,11 @@
 }
 
 /********************* WORK EXPERIENCE SCREEN *********************/
-.resume {
+.work_experience__title {
+	grid-column: span 2;
+}
+
+.work_experience {
 	overflow: hidden;
 	position: relative;
 	z-index: 3;
@@ -315,12 +319,12 @@
 	padding: 20px 5vw 0 5vw;
 }
 
-.resume__discipline_name {
+.work_experience__discipline_name {
 	font-size: 24px;
 	margin: 40px 0 20px 13px;
 }
 
-.resume__link {
+.work_experience__link {
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -330,7 +334,7 @@
 }
 
 @media screen and (max-width: 768px) {
-	.resume {
+	.work_experience {
 		display: block;
 		font-size: 16px;
 	}

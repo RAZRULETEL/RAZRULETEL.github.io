@@ -25,7 +25,7 @@ const ACHIEVEMENTS_DATA: (dict: Dict) => ResumeItem[] = (dict) => [
 		dates: `04.2022 - ${dict.present}`,
 		description: (
 			<a
-				className={styles.resume__link}
+				className={styles.work_experience__link}
 				href="https://www.codewars.com/users/RAZRULETEL "
 				aria-label={dict.codewars_aria_label}
 			>
@@ -61,7 +61,7 @@ const WORK_EXPERIENCE_DATA = (dict: Dict) => [
 			<>
 				AllSee,{' '}
 				<a
-					className={styles.resume__link}
+					className={styles.work_experience__link}
 					href="https://allsee.team/ "
 					aria-label={dict.allsee_aria_label}
 				>
@@ -82,7 +82,7 @@ const WORK_EXPERIENCE_DATA = (dict: Dict) => [
 			<>
 				FooDate,{' '}
 				<a
-					className={styles.resume__link}
+					className={styles.work_experience__link}
 					href="https://foodate.ru/ "
 					aria-label={dict.foodate_aria_label}
 				>
@@ -104,7 +104,7 @@ const WORK_EXPERIENCE_DATA = (dict: Dict) => [
 			<>
 				{dict.aitip},{' '}
 				<a
-					className={styles.resume__link}
+					className={styles.work_experience__link}
 					href="https://github.com/Intention-man/new_aitip_site/ "
 					aria-label={dict.aitip_aria_label}
 				>
@@ -121,17 +121,17 @@ const WORK_EXPERIENCE_DATA = (dict: Dict) => [
 	},
 ];
 
-export default function WorkExperienceScreen({dict}: { dict: { [key: string]: string } }) {
+export default function WorkExperienceScreen({dict}: { dict: Dict }) {
 	const sectionRef = useAnimation();
 	const column1Ref = useAnimation();
 	const column2Ref = useAnimation();
 
 	return (
-		<section className={styles.resume} ref={sectionRef}>
-			<h2 className={styles.section_title} style={{gridColumn: 'span 2'}}>{dict.resume__title}</h2>
+		<section className={styles.work_experience} ref={sectionRef}>
+			<h2 className={styles.section_title + ' ' + styles.work_experience__title}>{dict.work_experience__title}</h2>
 
-			<div className={styles.resume__column} ref={column1Ref}>
-				<h5 className={styles.resume__discipline_name}>{dict.education}</h5>
+			<div className={styles.work_experience__column} ref={column1Ref}>
+				<h5 className={styles.work_experience__discipline_name}>{dict.education}</h5>
 				{EDUCATION_DATA(dict).map((item) => (
 					<ResumeCard
 						key={item.title}
@@ -141,7 +141,7 @@ export default function WorkExperienceScreen({dict}: { dict: { [key: string]: st
 					/>
 				))}
 
-				<h5 className={styles.resume__discipline_name}>{dict.achievements}</h5>
+				<h5 className={styles.work_experience__discipline_name}>{dict.achievements}</h5>
 				{ACHIEVEMENTS_DATA(dict).map((item, i) => (
 					<ResumeCard
 						key={i}
@@ -152,8 +152,8 @@ export default function WorkExperienceScreen({dict}: { dict: { [key: string]: st
 				))}
 			</div>
 
-			<div className={styles.resume__column} ref={column2Ref}>
-				<h5 className={styles.resume__discipline_name}>{dict.work_experience}</h5>
+			<div className={styles.work_experience__column} ref={column2Ref}>
+				<h5 className={styles.work_experience__discipline_name}>{dict.work_experience}</h5>
 				{WORK_EXPERIENCE_DATA(dict).map((item, i) => (
 					<ResumeCard
 						key={i}

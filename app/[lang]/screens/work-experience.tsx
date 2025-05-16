@@ -6,23 +6,28 @@ import {Dict} from "@/app/globals";
 
 interface ResumeItem {
 	title: string;
-	dates: string;
+	dateStart: string; // ISO date format
+	dateEnd?: string;  // ISO date format or undefined for present
+	dateShowYearOnly?: boolean
 	description: React.ReactNode;
 	achievements?: string[];
 }
 
-const EDUCATION_DATA: (dict: Dict) => ResumeItem[] = (dict) => [
+
+const EDUCATION_DATA = (dict: Dict): ResumeItem[] => [
 	{
 		title: dict.education__specialization,
-		dates: '2022 - 2026',
+		dateStart: '2022',
+		dateEnd: '2026',
+		dateShowYearOnly: true,
 		description: dict.education__university,
 	},
-]
+];
 
-const ACHIEVEMENTS_DATA: (dict: Dict) => ResumeItem[] = (dict) => [
+const ACHIEVEMENTS_DATA = (dict: Dict): ResumeItem[] => [
 	{
 		title: dict.codewars_rank,
-		dates: `04.2022 - ${dict.present}`,
+		dateStart: '2022-04',
 		description: (
 			<a
 				className={styles.work_experience__link}
@@ -35,28 +40,30 @@ const ACHIEVEMENTS_DATA: (dict: Dict) => ResumeItem[] = (dict) => [
 	},
 	{
 		title: dict.sport_section_manager,
-		dates: `02.2024 - ${dict.present}`,
+		dateStart: '2024-02',
 		description: (
 			<span className={styles.normal_weight}>
-        {dict.sport_section_manager__description}
-      </span>
+        		{dict.sport_section_manager__description}
+      		</span>
 		),
 	},
 	{
 		title: dict.university,
-		dates: `2022 - ${dict.present}`,
+		dateStart: '2022',
+		dateShowYearOnly: true,
 		description: (
 			<span className={styles.normal_weight}>
-        {dict.university_discipline__description}
-      </span>
+        		{dict.university_discipline__description}
+      		</span>
 		),
 	},
 ];
 
-const WORK_EXPERIENCE_DATA = (dict: Dict) => [
+const WORK_EXPERIENCE_DATA = (dict: Dict): ResumeItem[] => [
 	{
 		title: dict.fullstack_dev,
-		dates: '07.2024 - 10.2024',
+		dateStart: '2024-07',
+		dateEnd: '2024-10',
 		description: (
 			<>
 				AllSee,{' '}
@@ -77,7 +84,8 @@ const WORK_EXPERIENCE_DATA = (dict: Dict) => [
 	},
 	{
 		title: dict.frontend_dev,
-		dates: '02.2024 - 06.2024',
+		dateStart: '2024-02',
+		dateEnd: '2024-06',
 		description: (
 			<>
 				FooDate,{' '}
@@ -99,7 +107,8 @@ const WORK_EXPERIENCE_DATA = (dict: Dict) => [
 	},
 	{
 		title: dict.frontend_dev,
-		dates: '03.2023 - 07.2023',
+		dateStart: '2023-03',
+		dateEnd: '2023-07',
 		description: (
 			<>
 				{dict.aitip},{' '}
@@ -126,43 +135,47 @@ export default function WorkExperienceScreen({dict}: { dict: Dict }) {
 	const column1Ref = useAnimation();
 	const column2Ref = useAnimation();
 
+	const dateFormatter = new Intl.DateTimeFormat(dict.locale, {
+		year: "numeric",
+		month: "numeric",
+	})
+
+	const resumeCardRenderer = (itemsGetter: (dict: Dict) => ResumeItem[]) => (
+		itemsGetter(dict).map((item, i) => {
+			let firstDate: string = '';
+			let secondDate: string = '';
+			if (item.dateShowYearOnly) {
+				firstDate = new Date(item.dateStart).getFullYear().toString();
+				secondDate = item.dateEnd ? new Date(item.dateEnd).getFullYear().toString() : dict.present;
+			} else {
+				firstDate = dateFormatter.format(new Date(item.dateStart));
+				secondDate = item.dateEnd ? dateFormatter.format(new Date(item.dateEnd)) : dict.present;
+			}
+			return (<ResumeCard
+				key={i}
+				title={item.title}
+				dates={`${firstDate} - ${secondDate}`}
+				description={item.description}
+				achievements={item.achievements}
+			/>)
+		})
+	);
+
 	return (
 		<section className={styles.work_experience} ref={sectionRef}>
 			<h2 className={styles.section_title + ' ' + styles.work_experience__title}>{dict.work_experience__title}</h2>
 
 			<div className={styles.work_experience__column} ref={column1Ref}>
 				<h5 className={styles.work_experience__discipline_name}>{dict.education}</h5>
-				{EDUCATION_DATA(dict).map((item) => (
-					<ResumeCard
-						key={item.title}
-						title={item.title}
-						dates={item.dates}
-						description={item.description}
-					/>
-				))}
+				{resumeCardRenderer(EDUCATION_DATA)}
 
 				<h5 className={styles.work_experience__discipline_name}>{dict.achievements}</h5>
-				{ACHIEVEMENTS_DATA(dict).map((item, i) => (
-					<ResumeCard
-						key={i}
-						title={item.title}
-						dates={item.dates}
-						description={item.description}
-					/>
-				))}
+				{resumeCardRenderer(ACHIEVEMENTS_DATA)}
 			</div>
 
 			<div className={styles.work_experience__column} ref={column2Ref}>
 				<h5 className={styles.work_experience__discipline_name}>{dict.work_experience}</h5>
-				{WORK_EXPERIENCE_DATA(dict).map((item, i) => (
-					<ResumeCard
-						key={i}
-						title={item.title}
-						dates={item.dates}
-						description={item.description}
-						achievements={item.achievements}
-					/>
-				))}
+				{resumeCardRenderer(WORK_EXPERIENCE_DATA)}
 			</div>
 		</section>
 	);

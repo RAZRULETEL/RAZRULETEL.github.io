@@ -61,9 +61,19 @@ const ACHIEVEMENTS_DATA = (dict: Dict): ResumeItem[] => [
 
 const WORK_EXPERIENCE_DATA = (dict: Dict): ResumeItem[] => [
 	{
+		title: dict.frontend_dev,
+		dateStart: '2024-12',
+		dateEnd: '2025-02',
+		description: dict.freelancer,
+		achievements: [
+			dict.freelancer_achievement_1,
+			dict.freelancer_achievement_2,
+		],
+	},
+	{
 		title: dict.fullstack_dev,
 		dateStart: '2024-07',
-		dateEnd: '2024-10',
+		dateEnd: '2024-11',
 		description: (
 			<>
 				AllSee,{' '}
@@ -84,7 +94,7 @@ const WORK_EXPERIENCE_DATA = (dict: Dict): ResumeItem[] => [
 	},
 	{
 		title: dict.frontend_dev,
-		dateStart: '2024-02',
+		dateStart: '2023-12',
 		dateEnd: '2024-06',
 		description: (
 			<>

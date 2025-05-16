@@ -43,6 +43,10 @@
 	"university": "University",
 	"university_discipline__description": "Completed the courses \"Algorithms and Data Structures\" and \"Web Programming\" with GPA of 5.0, at ITMO University.",
 
+	"freelancer": "Freelancer",
+	"freelancer_achievement_1": "Developed an advanced version of the 'Game of Life' with customizable genes and mutations using Next.js as a coursework project.",
+	"freelancer_achievement_2": "Built an MVP of a crowdfunding platform (Kickstarter-like) using Next.js.",
+
 	"contacts__title": "Contacts",
 
 	"skills__title": "My skills"
